@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+
+    <style>
+      table {
+          border-collapse: collapse;
+          width: 100%;
+      }
+  
+      th, td {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+      }
+  
+      th {
+          background-color: #f2f2f2;
+      }
+  </style>
+
+  </head>
+  <body>
+    <table>
+      <thead>
+          <tr>
+              <th>user_id</th>
+              <th>suprevisor id</th>
+              <th>reason</th>
+              
+          </tr>
+      </thead>
+      <tbody>
+          {% for stock in stocks %}
+          <tr>
+              <td>{{ stock[0] }}</td>
+              <td>{{ stock[1] }}</td>
+              <td>{{ stock[2] }}</td>
+              
+             
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+
+  </body>
+</html>
